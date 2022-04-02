@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 01:35:28 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/02 01:43:56 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/02 16:30:55 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	length;
 	size_t	i;
 
-
+	if (!dst || !src)
+		return (0);
 	length = static_strlen(src);
 	if (size <= 0)
 		return (length);

@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/02 00:48:14 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/02 16:45:07 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 * @return The result of the comparison
 */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -53,7 +54,8 @@ void	ft_bzero(void *s, size_t n);
 
 /**
  * @brief This function copys a memory area to other memory area.
- *
+ * Don't use if the memory area might overlap.
+ * In this case, use memmove instead.
  * @param dest dest area to receive thec copy
  * @param src source area to copy
  * @param n n bytes that will be copied to dest
@@ -72,7 +74,19 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
  */
 void	*ft_memmove(void *dest, void *src, size_t n);
 
+/**
+ * @brief This functions concatenate two strings
+ * @param dst The string that will act like the buffer to concatenation.
+ * @param src The string that will be concatenate to the buffer.
+ * @param size This has to be the buffer size in order for the
+ * concatenation occurs well.
+ * @return The function returns the length of
+ * the new string that the buffer will receive.
+ * Notice that the return doesn't count
+ * the NULL character that has to be in the end.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
