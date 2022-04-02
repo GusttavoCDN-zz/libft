@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:42:49 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/03/31 19:07:34 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/01 23:01:05 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	char	*dst;
-	char	*string;
+	char	*d;
+	char	*s;
 
-	i = 0;
-	dst = (char *)dest;
-	string = (char *)src;
-	while (i < n)
-	{
-		dst[i] = string[i];
-		i++;
-	}
+	if (src == NULL && dest == NULL)
+		return (dest);
+	d = (char *)dest;
+	s = (char *)src;
+	while (n--)
+		*d++ = *s++;
+	return (dest);
 }

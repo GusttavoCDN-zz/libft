@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/03/31 19:08:12 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/01 23:56:35 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 
 /**
-* @brief Return the lenght of a string. Dont' count the '\0'
+* @brief Return the lenght of a string. Dont' count the '\0' (null character).
 */
 size_t	ft_strlen(const char *s);
 
@@ -42,10 +42,34 @@ size_t	ft_strlen(const char *s);
 * but is converted to char
 */
 void	*ft_memset(void *s, int c, size_t n);
+
 /**
-* @brief This function zero a byte string
+* @brief This erases in some memory area. Thema are to be
+* deleted is passed as n bytes
+* @param s The area to be erased
+* @param n The number of bytes to be erased
 */
 void	ft_bzero(void *s, size_t n);
+
+/**
+ * @brief This function copys a memory area to other memory area.
+ *
+ * @param dest dest area to receive thec copy
+ * @param src source area to copy
+ * @param n n bytes that will be copied to dest
+ * @return returns a void pointer to dest.
+ */
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+/**
+ * @brief This function copies n bytes from memory area src to dest.
+ * The memory area may overlap.
+ *
+ * @param dest Memory area dest for the copied bytes.
+ * @param src Memory area to copy from.
+ * @param n N bytes to copy.
+ * @return Returns a void pointer to dest
+ */
+void	*ft_memmove(void *dest, void *src, size_t n);
 
 #endif

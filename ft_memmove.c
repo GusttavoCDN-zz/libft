@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 18:17:51 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/01 20:50:40 by guda-sil@st      ###   ########.fr       */
+/*   Created: 2022/04/01 21:18:04 by guda-sil@st       #+#    #+#             */
+/*   Updated: 2022/04/01 23:57:18 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dest, void *src, size_t n)
 {
-	char	*str;
-	size_t	len;
+	char	*s;
+	char	*d;
 
-	str = (char *)s;
-	len = 0;
-	while (len < n)
-		str[len++] = '\0';
+	d = (char *)dest;
+	s = (char *)src;
+	if (d < s)
+	{
+		while (n--)
+			*d++ = *s++;
+		return (dest);
+	}
+	while (n--)
+		*(d + n) = *(s + n);
+	return (dest);
 }
