@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/01 23:56:35 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/02 00:21:03 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
  * @return Returns a void pointer to dest
  */
 void	*ft_memmove(void *dest, void *src, size_t n);
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
