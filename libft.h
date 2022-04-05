@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/04 17:45:35 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/04 22:01:12 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,21 @@ void	*ft_memmove(void *dest, void *src, size_t n);
  * Notice that the return doesn't count
  * the NULL character that has to be in the end.
  */
+
+/**
+ * @brief This functions scans until n bytes of a memory area searching for
+ * The first instance of c
+ * @param str Memory area to looking from
+ * @param c Byte to looking for
+ * @param n Until bytes we will scan
+ * @return Returns a void pointer to the first instance of c or NULL if
+ * doesn't found.
+ */
+void	*ft_memchr(const void *str, int c, size_t n);
+
+/**
+ * @brief This function compares two memory area until n bytes
+ */
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
