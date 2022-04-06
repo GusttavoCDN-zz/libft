@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/06 19:37:16 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/06 19:51:39 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,7 +170,14 @@ void	*ft_memchr(const void *str, int c, size_t n);
  */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-char *ft_strdup(const char *s);
+/**
+ * @brief This functions returns a pointer to a copy of a
+ * string passed as argument
+ * @param s The string to be copied
+ * @return Returns a pointer to the new string.
+ * Returns NULL if insufficient memory is available
+ */
+char	*ft_strdup(const char *s);
 
 // Functions from <stdlib.h> library
 
