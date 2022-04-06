@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/04 22:01:12 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/06 14:11:12 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
  * Dont count the NULL terminator.
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+
+/**
+ * @brief This functions scan an string searching for a substring at n bytes
+ *
+ * @param big The string to scan
+ * @param little The string to search for in the big
+ * @param len The n bytes where to searching for the substring
+ * @return Returns a pointer to the start of the substring at the string.
+ * Returns NULL if the substring is not found. Returns the original string if
+ * we pass an empty substring
+ */
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 // Function from <string.h> library
 
