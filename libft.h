@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/06 14:11:12 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/06 19:23:09 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,5 +169,17 @@ void	*ft_memchr(const void *str, int c, size_t n);
  * @brief This function compares two memory area until n bytes
  */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+// Functions from <stdlib.h> library
+
+/**
+ * @brief This functions allocate an amount of memory and initialize
+ * with 0 to use
+ * @param nmemb The quantity of elements to allocate
+ * @param size The size of each individual element
+ * @return Returns a pointer to the allocated memory.
+ * If fails, returns NULL.
+ */
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
