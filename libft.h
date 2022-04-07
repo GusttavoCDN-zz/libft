@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/06 22:33:16 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/07 16:17:17 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,5 +195,17 @@ void	*ft_calloc(size_t nmemb, size_t size);
  * @brief This function converts a string in a number
  */
 int		ft_atoi(const char *s);
+
+// "Original" functions from libft
+
+/**
+ * @brief This functions allocates with calloc
+ * and returns a substring from the string 's'
+ * @param s The base string to create a substring from.
+ * @param start The start index of the substring
+ * @param len The max length of the substring
+ * @return Returns the substring or NULL if fails.
+ */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
