@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/07 16:17:17 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/07 16:53:16 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,5 +207,13 @@ int		ft_atoi(const char *s);
  * @return Returns the substring or NULL if fails.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/**
+ * @brief This functions allocates and returns a new string
+ * which is the concatenation of s1 and s2
+ *
+ * @return Returns the new string or NULL if fails
+ */
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
