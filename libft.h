@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/06 19:51:39 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/06 22:33:16 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,5 +190,10 @@ char	*ft_strdup(const char *s);
  * If fails, returns NULL.
  */
 void	*ft_calloc(size_t nmemb, size_t size);
+
+/**
+ * @brief This function converts a string in a number
+ */
+int		ft_atoi(const char *s);
 
 #endif
