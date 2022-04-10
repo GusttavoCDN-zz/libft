@@ -12,7 +12,7 @@ SRC = ft_strlen.c ft_strncmp.c \
 	ft_memcmp.c ft_strnstr.c \
 	ft_calloc.c ft_strdup.c \
 	ft_atoi.c ft_substr.c \
-	ft_strjoin.c \
+	ft_strjoin.c ft_strtrim.c \
 
 OBJS = ${SRC:.c=.o}
 

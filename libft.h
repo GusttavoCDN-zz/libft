@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/07 16:53:16 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/09 23:50:35 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,5 +215,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * @return Returns the new string or NULL if fails
  */
 char	*ft_strjoin(char const *s1, char const *s2);
+
+/**
+ * @brief This functions returns a new string with chars
+ * specified in set removed from the start and end of the strin
+ *
+ * @param s1 String to be trimmed.
+ * @param set Chars to trim from the strin
+ * @return Returns the new string or NULL if malloc fails.
+ */
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
