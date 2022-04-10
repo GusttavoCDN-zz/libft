@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/09 23:50:35 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/09 23:55:38 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -225,5 +225,14 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * @return Returns the new string or NULL if malloc fails.
  */
 char	*ft_strtrim(char const *s1, char const *set);
+
+/**
+ * @brief This functions returns a trinsg representing the integer receveid
+ * as argument. Negative numbers are handled.
+ *
+ * @param n The integer to convert
+ * @return The string representing the integer. NULL if malloc fails.
+ */
+char	*ft_itoa(int n);
 
 #endif
