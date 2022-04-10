@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/10 11:51:26 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 11:55:57 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -282,4 +282,12 @@ void	ft_putstr_fd(char *s, int fd);
  * @param fd The file descriptor on which to write
  */
 void	ft_putendl_fd(char *s, int fd);
+
+/**
+ * @brief Outputs the integer "n" to the given fd
+ *
+ * @param n The integer to output
+ * @param fd The file descriptor on which to write
+ */
+void	ft_putnbr_fd(int n, int fd);
 #endif
