@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/10 11:29:00 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 11:51:26 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -258,4 +258,28 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
  */
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 
+/**
+ * @brief Outputs the char "c" to the given file descriptor
+ *
+ * @param c The char to output
+ * @param fd the file descriptor on which to write
+ */
+void	ft_putchar_fd(char c, int fd);
+
+/**
+ * @brief Outputs the string "s" to the given file descriptor
+ *
+ * @param s The string to output
+ * @param fd The file descriptor on which to write
+ */
+void	ft_putstr_fd(char *s, int fd);
+
+/**
+ * @brief Outputs the string "s" to the given file descriptor
+ * followed by a newline.
+ *
+ * @param s The string to output
+ * @param fd The file descriptor on which to write
+ */
+void	ft_putendl_fd(char *s, int fd);
 #endif
