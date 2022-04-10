@@ -6,28 +6,13 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 23:53:23 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/10 13:05:49 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 18:13:16 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static	size_t	ft_find_size(long int n);
-
-size_t	ft_find_size(long int n)
-{
-	size_t	i;
-
-	i = 1;
-	if (n <= 0)
-		i++;
-	while (n)
-	{
-		n = n / 10;
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_itoa(int n)
 {
@@ -56,4 +41,19 @@ char	*ft_itoa(int n)
 	}
 	str[size - 1] = '\0';
 	return (str);
+}
+
+size_t	ft_find_size(long int n)
+{
+	size_t	i;
+
+	i = 1;
+	if (n <= 0)
+		i++;
+	while (n)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
 }

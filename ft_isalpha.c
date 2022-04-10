@@ -6,9 +6,11 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 14:09:01 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/01 20:50:45 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 18:16:04 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

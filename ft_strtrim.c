@@ -6,27 +6,13 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 16:59:59 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/09 23:53:02 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 18:20:01 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static	int	ft_chars_to_trim(const char c, const char *set);
-
-static	int	ft_chars_to_trim(const char c, const char *set)
-{
-	size_t	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -46,4 +32,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!str_trimmed)
 		return (NULL);
 	return (str_trimmed);
+}
+
+static	int	ft_chars_to_trim(const char c, const char *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }

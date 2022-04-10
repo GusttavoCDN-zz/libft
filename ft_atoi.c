@@ -6,18 +6,13 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 21:06:28 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/06 22:34:41 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 18:10:52 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	s_isspace(int c)
-{
-	return ((c == ' ') || (c == '\n')
-		|| (c == '\t') || (c == '\v')
-		|| (c == '\f') || (c == '\r'));
-}
+static	int	s_isspace(int c);
 
 int	ft_atoi(const char *s)
 {
@@ -41,4 +36,11 @@ int	ft_atoi(const char *s)
 		s++;
 	}
 	return (result * sign);
+}
+
+static	int	s_isspace(int c)
+{
+	return ((c == ' ') || (c == '\n')
+		|| (c == '\t') || (c == '\v')
+		|| (c == '\f') || (c == '\r'));
 }
