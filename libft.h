@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/09 23:55:38 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 01:34:47 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -235,4 +235,15 @@ char	*ft_strtrim(char const *s1, char const *set);
  */
 char	*ft_itoa(int n);
 
+/**
+ * @brief Applies the function ’f’ to each character of the
+string ’s’, and passing its index as first argument
+to create a new string (with malloc(3)) resulting
+from successive application of "F"
+ *
+ * @param s The string on which to iterate.
+ * @param f The function to apply to each character.
+ * @return The string created from the successive applications of "F"
+ */
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 #endif
