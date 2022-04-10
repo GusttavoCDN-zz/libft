@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/10 01:34:47 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 11:29:00 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -246,4 +246,16 @@ from successive application of "F"
  * @return The string created from the successive applications of "F"
  */
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
+
+/**
+ * @brief This function applies the function "f" on each character of
+ * the string passed as argument, passing its index as first
+ * argument. Each character is passed by address to "f"
+ * to be modified if necessary
+ *
+ * @param s The string on which to iterate
+ * @param f The function to apply to each character
+ */
+void	ft_striteri(char *s, void (*f) (unsigned int, char*));
+
 #endif
