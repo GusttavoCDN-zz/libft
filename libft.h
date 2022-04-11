@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/10 18:15:45 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 23:28:09 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 // Functions from <ctype.h> library
 
@@ -305,4 +311,26 @@ void	ft_putnbr_fd(int n, int fd);
  * NULL if the allocation fails.
  */
 char	**ft_split(char const *s, char c);
+
+// Functions to handle linked lists
+
+/**
+ * @brief This functions returns a new node.
+ * The member variable "content"
+ * is initialized with the value of the parameter "content".
+ * The variable "next" is initialized
+ * To NULL
+ * @param content  The content to create the new node with
+ * @return The new node
+ */
+t_list	*ft_lstnew(void *content);
+
+/**
+ * @brief Adds the node ’new’ at the beginning of the list.
+ *
+ * @param lst The addes of a pointer to the first link of a list
+ * @param new The adress of a pointer to the node
+ * to be added to the list.
+ */
+void	ft_lstadd_front(t_list **lst, t_list *new);
 #endif

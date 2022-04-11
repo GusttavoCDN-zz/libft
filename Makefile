@@ -20,12 +20,19 @@ SRC = ft_strlen.c ft_strncmp.c \
 
 OBJS = ${SRC:.c=.o}
 
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c \
+
+BONUS_OBJS = ${BONUS_SRC:.c=.o}
+
 RM = rm -f
 
 all:	${NAME}
 
 ${NAME}: ${OBJS}
 	ar -rcs ${NAME} ${OBJS}
+
+bonus: ${NAME} ${BONUS_OBJS}
+	ar -rcs ${NAME} ${BONUS_OBJS}
 
 clean:
 	${RM} ${OBJS}
