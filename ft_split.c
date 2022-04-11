@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:01:56 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/10 18:09:54 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/11 00:22:13 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	words;
 	size_t	i;
-	size_t	j;
 	char	**str_arr;
 
 	words = count_words(s, c);

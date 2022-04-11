@@ -27,6 +27,8 @@ BONUS_OBJS = ${BONUS_SRC:.c=.o}
 
 RM = rm -f
 
+CFLAGS = -Wall -Wextra -Werror
+
 all:	${NAME}
 
 ${NAME}: ${OBJS}
@@ -40,6 +42,10 @@ clean:
 
 fclean: clean
 	${RM} ${NAME}
+
+so: all bonus
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so ${BONUS_OBJS} $(OBJS)
 
 re: fclean all
 
