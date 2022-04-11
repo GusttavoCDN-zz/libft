@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/11 00:21:32 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/11 12:02:31 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -341,4 +341,22 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
  * @return The length of the list
  */
 int		ft_lstsize(t_list *lst);
+
+/**
+ * @brief Returns the last node of the list.
+ *
+ * @param lst  The beginning of the list.
+ * @return Last node of the list
+ */
+t_list	*ft_lstlast(t_list *lst);
+
+/**
+ * @brief Adds the node ’new’ at the end of the list.
+ *
+ * @param lst The address of a pointer to the first link of
+ * a list.
+ * @param new  The address of a pointer to the node to be
+ * added to the list.
+ */
+void	ft_lstadd_back(t_list **lst, t_list *new);
 #endif

@@ -21,7 +21,8 @@ SRC = ft_strlen.c ft_strncmp.c \
 OBJS = ${SRC:.c=.o}
 
 BONUS_SRC = ft_lstnew.c ft_lstadd_front.c \
-			ft_lstsize.c \
+			ft_lstsize.c ft_lstlast.c \
+			ft_lstadd_back.c \
 
 BONUS_OBJS = ${BONUS_SRC:.c=.o}
 
@@ -43,9 +44,9 @@ clean:
 fclean: clean
 	${RM} ${NAME}
 
-so: all bonus
-	$(CC) -fPIC $(CFLAGS) $(SRC)
-	gcc -shared -o libft.so ${BONUS_OBJS} $(OBJS)
+# so: all bonus
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+# 	gcc -nostartfiles -shared -o libft.so ${BONUS_OBJS} $(OBJS)
 
 re: fclean all
 

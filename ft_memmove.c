@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 21:18:04 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/01 23:57:18 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/11 01:05:40 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 	char	*s;
 	char	*d;
 
+	if (!dest && !src)
+		return (NULL);
 	d = (char *)dest;
 	s = (char *)src;
 	if (d < s)

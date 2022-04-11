@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 16:31:40 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/03/31 19:08:36 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/11 01:11:08 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ void	*ft_memset(void *s, int c, size_t n)
 	len = 0;
 	while (len < n)
 		str[len++] = (unsigned char) c;
-	str[len] = '\0';
 	return (s);
 }

@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 16:18:22 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/11 00:46:52 by guda-sil@st      ###   ########.fr       */
+/*   Created: 2022/04/11 11:13:17 by guda-sil@st       #+#    #+#             */
+/*   Updated: 2022/04/11 12:02:20 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	str_len;
-	char	*str;
+	t_list	*node;
 
-	if (!s1 || !s2)
+	node = lst;
+	if (!node)
 		return (NULL);
-	str_len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	str = ft_calloc((str_len), sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcat(str, s1, ft_strlen(s1) + 1);
-	ft_strlcat(str, s2, str_len);
-	return (str);
+	while (node->next != NULL)
+		node = node->next;
+	return (node);
 }
