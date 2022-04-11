@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/10 23:28:09 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/10 23:48:56 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -333,4 +333,12 @@ t_list	*ft_lstnew(void *content);
  * to be added to the list.
  */
 void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * @brief Counts the number of nodes in a list.
+ *
+ * @param lst The beginning of the list.
+ * @return The length of the list
+ */
+int		ft_lstsize(t_list *lst);
 #endif
