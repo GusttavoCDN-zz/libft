@@ -22,7 +22,9 @@ OBJS = ${SRC:.c=.o}
 
 BONUS_SRC = ft_lstnew.c ft_lstadd_front.c \
 			ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c \
+			ft_lstadd_back.c ft_lstdelone.c \
+			ft_lstclear.c ft_lstiter.c \
+			ft_lstmap.c \
 
 BONUS_OBJS = ${BONUS_SRC:.c=.o}
 
@@ -30,13 +32,21 @@ RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
 
+CC = gcc
+
+INC = libft.h
+
 all:	${NAME}
 
-${NAME}: ${OBJS}
-	ar -rcs ${NAME} ${OBJS}
+${NAME}: ${OBJS} ${INC}
+	ar -rcs ${NAME} ${OBJS} ${INC}
 
 bonus: ${NAME} ${BONUS_OBJS}
 	ar -rcs ${NAME} ${BONUS_OBJS}
+
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
 clean:
 	${RM} ${OBJS} ${BONUS_OBJS}
@@ -44,10 +54,6 @@ clean:
 fclean: clean
 	${RM} ${NAME}
 
-# so: all bonus
-# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-# 	gcc -nostartfiles -shared -o libft.so ${BONUS_OBJS} $(OBJS)
-
 re: fclean all
 
-.PHONY: clean all fclean re
+.PHONY: clean all fclean re bonus
