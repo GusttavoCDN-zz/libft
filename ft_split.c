@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:01:56 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/11 00:22:13 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/20 23:03:04 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	**ft_split(char const *s, char c)
 	return (str_arr);
 }
 
-int	count_words(const char *s, char c)
+static	int	count_words(const char *s, char c)
 {
 	size_t	words;
 	size_t	new_word;
@@ -63,7 +63,7 @@ int	count_words(const char *s, char c)
 	return (words);
 }
 
-char	*create_word(const char *s, char c)
+static	char	*create_word(const char *s, char c)
 {
 	size_t	word_len;
 	size_t	i;
