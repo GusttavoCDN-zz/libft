@@ -32,7 +32,7 @@ RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
 
-CC = gcc
+CC = cc
 
 INC = libft.h
 
