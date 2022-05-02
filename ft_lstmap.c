@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 20:40:57 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/17 21:20:22 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/04/23 00:42:30 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *))
 			return (NULL);
 		}
 		ft_lstadd_back(&new_list, node);
+		lst = lst->next;
 	}
 	return (new_list);
 }
