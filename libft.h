@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/04/17 21:20:24 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/05/09 11:39:51 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# define BUFFER_SIZE 42
 
 typedef struct s_list
 {
@@ -404,4 +405,13 @@ void	ft_lstiter(t_list *lst, void (*f) (void *));
  * @return The new list. NULL if the malloc fails.
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *));
+
+/**
+ * @brief This functions can read a line from a file descriptor.
+ *
+ * @param fd The file descriptor to read from.
+ * @return The line read. NULL if there is nothing
+ * else to read, or an error occured.
+ */
+char	*get_next_line(int fd);
 #endif
