@@ -6,7 +6,7 @@
 /*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/05/09 11:39:51 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/05/13 21:52:54 by guda-sil@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -330,10 +330,10 @@ t_list	*ft_lstnew(void *content);
  * @brief Adds the node ’new’ at the beginning of the list.
  *
  * @param lst The addes of a pointer to the first link of a list
- * @param new The adress of a pointer to the node
+ * @param new_node The adress of a pointer to the node
  * to be added to the list.
  */
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new_node);
 
 /**
  * @brief Counts the number of nodes in a list.
@@ -356,10 +356,10 @@ t_list	*ft_lstlast(t_list *lst);
  *
  * @param lst The address of a pointer to the first link of
  * a list.
- * @param new  The address of a pointer to the node to be
+ * @param new_node  The address of a pointer to the node to be
  * added to the list.
  */
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new_node);
 
 /**
  * @brief Takes as a parameter a node and frees the memory of
