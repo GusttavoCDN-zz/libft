@@ -3,17 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guda-sil@student.42sp.org.br <guda-sil@    +#+  +:+       +#+        */
+/*   By: otaku <otaku@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 01:18:50 by guda-sil@st       #+#    #+#             */
-/*   Updated: 2022/05/13 21:52:54 by guda-sil@st      ###   ########.fr       */
+/*   Updated: 2022/06/09 01:50:28 by otaku            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+
 # define BUFFER_SIZE 42
 
 typedef struct s_list
@@ -414,4 +417,103 @@ t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *));
  * else to read, or an error occured.
  */
 char	*get_next_line(int fd);
+
+// Functions to auxiliate The ft_printf
+
+/**
+ * @brief This functions writes a char in the stdout 
+ * and returns the byte written.
+ *
+ * @param c The char to write
+ * @return int The number of bytes written
+ */
+int		ft_putchar_int(char c);
+
+/**
+ * @brief This functions writes a string in the stdout
+ * and returns the number of bytes written.
+ * 
+ * @param s The string to write
+ * @return int The number of bytes written
+ */
+int		ft_putstr_int(char *str);
+
+/**
+ * @brief This function writes a number in the stdout
+ * and returns the number of bytes written.
+ * 
+ * @param n The number to write
+ * @return The number of bytes written
+ */
+int		ft_putnbr_int(int n);
+
+/**
+ * @brief This function writes a string in reverse 
+ * in the stdout. 
+ * 
+ * @param str The string to write
+ * @return The number of bytes written
+ */
+int		ft_putstr_reversed(char *str);
+
+/**
+ * @brief This function returns a string 
+ * representing the given unsigned number
+ * 
+ * @param n The number to convert
+ * @return The string representing the number
+ */
+char	*ft_utoa(unsigned int n);
+
+/**
+ * @brief This functions writes a unsigned number in the stdout
+ * 
+ * @param n The number to write
+ * @return The number of bytes written
+ */
+int		ft_print_unsigned_int(unsigned int n);
+
+/**
+ * @brief This function writes a pointer in the stdout
+ * 
+ * @param address The address to write
+ * @return The number of bytes written
+ */
+int		ft_print_pointer(unsigned long address);
+
+/**
+ * @brief This function wirites a hex number in the stdout
+ * 
+ * @param nb The number to write
+ * @param type The case of the hex number (upper or lower)
+ * @return The number of bytes written
+ */
+int		ft_print_hex_int(unsigned int nb, char type);
+
+/**
+ * @brief This function converts a decimal to hexadecimal
+ * 
+ * @param digit The decimal digit to convert
+ * @param type The case of the number (upper or lower)
+ * @return The hexadecimal digit
+ */
+char	ft_decimal_to_hex(char digit, char type);
+
+/**
+ * @brief This functions calculates the number of bytes
+ * of a hexadecimal number
+ * 
+ * @param nb The number to calculate
+ * @return The number of bytes
+ */
+int		ft_calc_hex_length(unsigned long nb);
+
+/**
+ * @brief This function Write formatted output to stdout.
+ *
+ * @param format The format string
+ * @param ...  The arguments
+ * @return The size of the string written
+ */
+int		ft_printf(const char *format, ...);
 #endif
