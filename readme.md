@@ -109,7 +109,24 @@ aumentando suas funcionalidades.
 
 - **ft_lstmap** - Aplica uma função a cada elemento de uma lista e retorna uma uma nova lista com as aplicações.
 
+## Funções Complementares
 
+ - **get_next_line** - Lê uma linha de um arquivo.
+
+ - **ft_printf** - Imprime uma string formatada no stdout.
+
+ - **ft_utoa** - Converte um número inteiro positivo (unsigned) em string.
+
+ - **ft_putstr_reverse** - Imprime uma string de trás para frente.
+
+ - **ft_print_hex_int** - Imprime um inteiro em hexadecimal.
+
+ - **ft_print_pointer** - Imprime um ponteiro.
+
+ - **ft_decimal_to_hex** - Converte um número em hexadecimal.
+ 
+ - **ft_calc_hex_length** - Calcula o tamanho de um número em hexadecimal.
+ 
 <h1 align="center"><strong>Principais Conceitos Aprendidos</strong></h2>
 
  - Criação de algoritmos.
