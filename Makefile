@@ -21,7 +21,12 @@ SRC = ft_strlen.c ft_strncmp.c \
 	ft_lstsize.c ft_lstlast.c \
 	ft_lstadd_back.c ft_lstdelone.c \
 	ft_lstclear.c ft_lstiter.c \
-	ft_lstmap.c \
+	ft_lstmap.c ft_printf.c \
+	ft_utoa.c ft_calc_hex_length.c \
+	ft_decimal_to_hex.c ft_print_hex_int.c \
+	ft_print_pointer.c ft_print_unsigned_int.c \
+	ft_putstr_reversed.c ft_putnbr_int.c \
+	ft_putstr_int.c ft_putchar_int.c \
 
 OBJS = ${SRC:.c=.o}
 
